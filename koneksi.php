@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$database = "tangled";
+$database = "";
 
 // Membuat koneksi ke database
 $conn = mysqli_connect($server, $username, $password, $database);
