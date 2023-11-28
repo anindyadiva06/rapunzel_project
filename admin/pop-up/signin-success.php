@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN FAILED</title>
+    <title>SIGN IN SUCCES</title>
 </head>
 <body>
     <div class="container">
@@ -12,7 +12,7 @@
         </div>
         <div class="right">
             <h1>SIGN IN SUCCESSED!</h1>
-            <button class="ok"><a href="../index/index.html">OK</a></button>
+            <button class="ok"><a href="../index/index.php">OK</a></button>
         </div>
     </div>
     
