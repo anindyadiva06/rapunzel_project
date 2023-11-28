@@ -107,7 +107,7 @@
 
         .content {
             position: absolute;
-            top: 10px;
+            top: 50px;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -119,81 +119,56 @@
             height: 100%;
         }
 
-        .big-box{
+        .box-1,
+        .box-2 {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            width: 900px;
+            height: 180px;
+            background-color: #C489CD;
+            border-radius: 40px;
+            margin: 30px;
+        }
+
+        .box-1 img,
+        .box-2 img {
+            width: 330px;
             margin-top: 10px;
-            margin-bottom: 0px;
-            
-        }
-
-        .box-1{
-            display: flex;
-            justify-content: center;
-            width: 400px;
-            height: 200px;
-            background-image: url('act-1.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-bottom: 0px;
-   
-        }
-
-        .mini-box{
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            width: 350px;
-            height: 120px;
-            box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
-            background-color: #EDD573;
-            border-radius: 80px;
-            margin-top: 20px;
             margin-bottom: 10px;
-        }
-
-        .img img{
-            width: 150px;
-            margin-left: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
 
         .content h1 {
             color: #EDD573;
-            font-size: 40px;
+            font-size: 64px;
             font-weight: 400;
-            text-shadow:2px 3px 2px #C489CD; 
         }
 
-        .act p{
-            margin-top: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            color: #C489CD; 
-            font-size: 13px;
+        .text {
+            color: #EDD573;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 17px;
         }
 
-        .edit {
-            background-color: #C489CD;
-            width: 80px;
+        .text h2 {
+            font-weight: 200;
+            text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .text button {
+            background-color: rgb(233, 226, 131);
+            width: 120px;
             border-radius: 20px;
             box-shadow: 0px 4px 2px rgb(0, 0, 0);
             border: none;
             padding: 5px;
-            margin-top: 15px;
-            margin-right: 10px;
-            margin-left: 10px;
+            margin-top: 10px;
         }
 
-        .edit a{
-            color: rgb(233, 226, 131);
+        .read-more a {
+            color: #C489CD;
             text-decoration: none;
+            font-size: 15px;
         }
-
     </style>
 </head>
 <body>
@@ -213,55 +188,28 @@
                 <div class="rapunzel"></div>
                 <div class="eugene"></div>
                 <div class="content">
-                   <h1>Activity Eugene</h1>
-                   <div class="big-box">
-                        <div class="box-1">
-                            <div class="mini-box">
-                                <div class="img">
-                                    <img src="activity (5).png">
-                                </div>
-                                <div class="act">
-                                    <p>Eugene mencuri tiara rapunzel yang terpajang di kerajaan</p>
-                                    <button class="edit"><a href="edit-act.html">Edit</a></button>
-                                </div>
-                            </div>
+                   <h1>Activity</h1>
+                   <div class="box-1">
+                        <div class="img">
+                            <img src="prop-act (1).png">
                         </div>
-                        <div class="box-1">
-                                <div class="mini-box">
-                                    <div class="img">
-                                        <img src="activity (6).png">
-                                    </div>
-                                    <div class="act">
-                                        <p>Eugene mengajak Rapunzel untuk menjelajahi dunia luar</p>
-                                        <button class="edit"><a href="edit-act.html">Edit</a></button>
-                                    </div>
-                                </div>
-                        </div>
-                   </div>
-                   <div class="big-box">
-                    <div class="box-1">
-                        <div class="mini-box">
-                            <div class="img">
-                                <img src="activity (7).png">
-                            </div>
-                            <div class="act">
-                                <p>Eugene tak sengaja bertemu dengan Rapunzel saat bersembunyi dari prajurit</p>
-                                <button class="edit"><a href="edit-act.html">Edit</a></button>
-                            </div>
+                        <div class="text">
+                            <h2>Rapunzel</h2>
+                            <p>Perjalanan Rapunzel dari bayi saat diculik dari orang tuanya hingga bertemu dengan pencuri yang membantunya pergi dari menara untuk bertemu orang tuanya</p>
+                            <button class="read-more"><a href="activity-rapunzel.html">Read More</a></button>
                         </div>
                     </div>
-                    <div class="box-1">
-                            <div class="mini-box">
-                                <div class="img">
-                                    <img src="activity (8).png">
-                                </div>
-                                <div class="act">
-                                    <p>Eugene memotong rambut Rapunzel untuk menyelematkannya</p>
-                                    <button class="edit"><a href="edit-act.html">Edit</a></button>
-                                </div>
-                            </div>
+                    <div class="box-2">
+                        <div class="img">
+                            <img src="prop-act (2).png">
+                        </div>
+                        <div class="text">
+                            <h2>Eugene</h2>
+                            <p>Perjalanan Eugene dari menjadi pencuri sampai bertemu dengan Rapunzel yang mengubah hidupnya</p>
+                            <button class="read-more"><a href="activity-eugene.html">Read More</a></button>
+                        </div>
                     </div>
-               </div>
+                
                 </div>
             </div>
     </div>
