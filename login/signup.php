@@ -21,8 +21,11 @@ if ($password !== $confirm_password) {
     die("Error: Passwords do not match.");
 }
 
+// Hash password
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
 // Query untuk menyimpan data ke database
-$sql = "INSERT INTO account (username, password, role) VALUES ('$username', '$password', 'reader')";
+$sql = "INSERT INTO account (username, password, role) VALUES ('$username', '$hashed_password', 'reader')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Sign Up successful. <a href='signin.html'>SIGN IN here</a>";
