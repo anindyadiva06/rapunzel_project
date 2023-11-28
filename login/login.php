@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 
     // Redirect sesuai role
     if ($role === 'storyteller') {
-        header("Location: admin_dashboard.php"); // Ganti dengan URL halaman admin
+        header("Location: storyteller-index.php"); // Ganti dengan URL halaman admin
     } else if ($role === 'reader') {
         echo "Login successful. Welcome, $username!";
         // Redirect ke halaman pengguna biasa atau lakukan tindakan lainnya
