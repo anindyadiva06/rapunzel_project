@@ -19,7 +19,40 @@
             <a href="../profile/my-profile.php"><img class='acc' src="acc.jpg"></a>
         </nav>
         <div class="main">
+            <div class="judul">
+                <h2 style="margin-top:180px;">CHARACTER</h2>
+            </div>
            
+           <div class="box">
+                <div class="box-1">
+                    <div class="wrap">
+                        <div class="img1"></div>
+                        <div class="name">Rapunzel</div>
+                        <div class="more"><a href="read-rapunzel.html">Get To Know Rapunzel</a></div>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div class="wrap">
+                        <div class="img2"></div>
+                        <div class="name">Eugene</div>
+                        <div class="more"><a href="read-eugene.html">Get To Know Eugene</a></div>
+                    </div>
+                </div>
+                <div class="box-3">
+                    <div class="wrap">
+                        <div class="img3"></div>
+                        <div class="name">Gothel</div>
+                        <div class="more"><a href="read-gothel.html">Get To Know Gothel</a></div>
+                    </div>
+                </div>
+                <div class="box-4">
+                    <div class="wrap">
+                        <div class="img4"></div>
+                        <div class="name">Maximus</div>
+                        <div class="more"><a href="read-maximus.html">Get To Know Maximus</a></div>
+                    </div>
+                </div>
+           </div>
         </div>
         
         
@@ -42,9 +75,10 @@
     align-items: center;
     width:100vw;
     height: 100vh;
-    background: linear-gradient(90deg, rgba(129,128,159,0.8181818181818181) 0%, rgba(70,45,74,0.6217532467532467) 0%), url('wallpaper.jpeg');
-    background-size: cover;
-    background-position: center center;
+    background-color: white;
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
 }
 
 .wrapper{
@@ -97,6 +131,12 @@
     color: rgb(187, 138, 187);
 }
 
+.main{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
 .acc{
     width : 50px;
     height: 50px;
@@ -106,5 +146,133 @@
     margin-right: 20px;
 }
 
+.judul h2{
+    color: rgb(233, 226, 131);
+    font-weight: 500;
+    font-size: 40px;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 
+}
+
+.box-1{
+    
+    width: 200px;
+    height: 500px; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url('char-rapunzel.png');
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box-2{
+    width: 200px;
+    height: 500px; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url('char-eugene.png');
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box-3{
+    width: 200px;
+    height: 500px; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url('char-gothel.png');
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box-4{
+    width: 200px;
+    height: 500px; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url('char-maxim.png');
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1{
+    background-image: url('rapunzel.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px; 
+}
+
+.img2{
+    background-image: url('eugene.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px; 
+}
+
+.img3{
+    background-image: url('gothel.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px; 
+}
+
+.img4{
+    background-image: url('maximus.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px; 
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: rgb(187, 138, 187) ;
+    border-radius: 40px;
+    box-shadow: 0px 1px 6px 1px rgb(54, 51, 51);
+    color:rgb(248, 242, 153);
+    width: 180px;
+    height: 50px;
+}
+
+.more a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 50px;
+    background-color: rgb(187, 138, 187) ;
+    box-shadow: 0px 1px 6px 1px rgb(54, 51, 51);
+    border-radius: 40px;;
+    color:rgb(248, 242, 153);
+    width: 140px;
+    height: 50px;
+}
 </style>
