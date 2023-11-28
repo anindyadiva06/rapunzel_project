@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../koneksi.php');
+require_once('../../koneksi.php');
 
 // Memeriksa apakah form sign up telah disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
