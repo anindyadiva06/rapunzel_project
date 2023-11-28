@@ -15,20 +15,27 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Query untuk memeriksa keberadaan akun
-$sql = "SELECT * FROM account WHERE username = '$username' AND password = '$password'";
+$sql = "SELECT * FROM account WHERE username = '$username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Akun ditemukan
     $row = $result->fetch_assoc();
-    $role = $row['role'];
+    $hashed_password = $row['password'];
 
-    // Redirect sesuai role
-    if ($role === 'storyteller') {
-        header("Location: storyteller-index.php"); // Ganti dengan URL halaman admin
-    } else if ($role === 'reader') {
-        echo "Login successful. Welcome, $username!";
-        // Redirect ke halaman pengguna biasa atau lakukan tindakan lainnya
+    // Verifikasi password
+    if (password_verify($password, $hashed_password)) {
+        // Login berhasil
+        $role = $row['role'];
+
+        // Redirect sesuai role
+        if ($role === 'storyteller') {
+            header("Location: storyteller-index.php"); 
+        } else if ($role === 'reader') {
+            $_SESSION['username'] = $username; // Simpan username dalam sesi
+            header("Location: index.php");
+        }
+    } else {
+        echo "Login failed. Invalid username or password.";
     }
 } else {
     echo "Login failed. Invalid username or password.";
