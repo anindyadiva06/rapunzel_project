@@ -14,7 +14,7 @@
             <img src="warning.png">
             <h1>SIGN IN FAILED!</h1>
             <h3>Check your username or password again</h3>
-            <button class="ok"><a href="../login/signin.html">OK</a></button>
+            <button class="ok"><a href="../login/signin.php">OK</a></button>
         </div>
     </div>
     
