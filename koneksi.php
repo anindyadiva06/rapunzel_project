@@ -12,7 +12,6 @@ if (!$koneksi) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-// Atur pengaturan karakter untuk koneksi
 mysqli_set_charset($koneksi, "utf8");
 
 ?>
