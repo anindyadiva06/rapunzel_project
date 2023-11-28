@@ -8,10 +8,10 @@ $database = "tangledd";
 $conn = mysqli_connect($server, $username, $password, $database);
 
 // Memeriksa koneksi
-if (!$koneksi) {
+if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-mysqli_set_charset($koneksi, "utf8");
+mysqli_set_charset($conn, "utf8");
 
 ?>
