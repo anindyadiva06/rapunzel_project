@@ -1,10 +1,71 @@
+<?php
+session_start();
+require_once('../koneksi.php');
+
+// Memeriksa apakah form login telah disubmit
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Mengambil nilai dari form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Validasi form
+    if (empty($username) || empty($password)) {
+        echo "Semua kolom harus diisi.";
+    } else {
+        // Query SQL untuk memeriksa keberadaan user dalam database
+        $sql = "SELECT * FROM account WHERE username='$username' AND password='$password'";
+        $result = mysqli_query($conn, $sql);
+
+        // Memeriksa hasil query
+        if ($result) {
+            // Memeriksa jumlah baris hasil query
+            $row_count = mysqli_num_rows($result);
+            if ($row_count == 1) {
+                // Mengambil data user
+                $user_data = mysqli_fetch_assoc($result);
+
+                // Menyimpan data user dalam session
+                $_SESSION['user_id'] = $user_data['acc_id'];
+                $_SESSION['username'] = $user_data['username'];
+                $_SESSION['role'] = $user_data['role'];
+
+                // Redirect sesuai role setelah login
+                if ($_SESSION['role'] == 'storyteller') {
+                    header('Location: ../index/index.php');
+                } else {
+                    header('Location: ../../index/index.php');
+                }
+                exit();
+            } else {
+                echo "Username atau password salah.";
+            }
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+    }
+}
+
+// Menutup koneksi ke database
+mysqli_close($conn);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="login.css">
-    <title>SIGN UP</title>
+    <title>SIGN IN</title>
+    <script>
+        function validateForm() {
+            var username = document.forms["sign"]["username"].value;
+            var password = document.forms["sign"]["password"].value;
+            if (username == "" || password == "") {
+                alert("Field can't be empty! ");
+                return false; 
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -15,28 +76,20 @@
             <div class="right-text">
                 <div class="prop-left"><img src="sign-prop.png"></div>
                 <div class="form-box login">
-                    <h2>SIGN UP</h2><style>h2{margin-bottom:25px;}</style>
-                    <form action="signup.php" method="post">
+                    <h2>SIGN IN</h2><style>h2{margin-bottom:25px;}</style>
+                    <form action="signin.php" method="post">
                         <div class="input-box">
-                            <input type="text">
-                            <label>Name</label>
-                        </div>
-                        <div class="input-box">
-                            <input type="text">
+                            <input type="text" name="username">
                             <label>Username</label>
                         </div>
                         <div class="input-box">
-                            <input type="password" >
+                            <input type="password" name="password">
                             <label>Password</label>
                         </div>
-                        <div class="input-box">
-                            <input type="password">
-                            <label>Confirm Password</label>
-                        </div>
                         <div class="signup-link">
-                            <p>Already have an account? <a href="signin.html">SIGN IN</a></p>
+                            <p>Don't have an account yet? <a href="signup.php">SIGN UP</a></p>
                         </div>
-                        <button class="btn">SIGN UP</button>
+                        <button class="btn">SIGN IN</button>
                     </form> 
                 </div>
             </div>
@@ -54,7 +107,7 @@
     font-family: 'Irish Grover';
 }
 
-body{
+.body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,21 +131,17 @@ body{
     overflow: hidden;
 }
 
-.left img{
-    position: bottom left;
-}
-
 .prop-left img{
     position: absolute;
     top: 0px; 
     right: 0px;
-    width: 200px;
+    width: 178px;
 }
 
 .container .form-box{
     position: absolute;
     top: 0;
-    width: 35%;
+    width: 40%;
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -100,7 +149,7 @@ body{
  }
 
  .container .form-box.login{
-    right : 100px;
+    right : 55px;
     padding: 0 40px 0 60px;
 }
 
@@ -129,11 +178,11 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    color: rgb(207, 154, 207);
-    padding-right: 23px;
+    color: rgb(187, 138, 187);
+    padding-right: 60px;
     font-size: 20px;
     font-weight: 500;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid black;;
     transition: .5s;
  }
 
@@ -146,7 +195,7 @@ body{
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    font-size: 20px; 
+    font-size: 20px;
     color : black;
     pointer-events: none;
     transition: .5s;
@@ -181,7 +230,7 @@ body{
  .signup-link p a{
     text-decoration: none;
     font-weight: 500;
-    color: rgb(187, 138, 187);
+    color: rgb(225, 150, 177);
  }
 
  
