@@ -35,7 +35,6 @@ mysqli_close($conn);
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +65,7 @@ mysqli_close($conn);
                 <div class="prop-left"><img src="sign-prop.png"></div>
                 <div class="form-box login">
                     <h2>SIGN UP</h2><style>h2{margin-bottom:25px;}</style>
-                    <form action="signup.php" method="post">
+                    <form action="POST" name="sign" onsubmit="return validateForm()">
                         <div class="input-box">
                             <input type="text" name="name">
                             <label>Name</label>
@@ -76,11 +75,11 @@ mysqli_close($conn);
                             <label>Username</label>
                         </div>
                         <div class="input-box">
-                            <input type="password" name="password">
+                            <input type="password" name="password" >
                             <label>Password</label>
                         </div>
                         <div class="input-box">
-                            <input type="password" name="confirm_password">
+                            <input type="password" name="pw">
                             <label>Confirm Password</label>
                         </div>
                         <div class="signup-link">
@@ -110,6 +109,7 @@ body{
     align-items: center;
     max-height: 100vh; 
     background: white;
+    position: relative;
 }
 
 .container{
@@ -122,8 +122,8 @@ body{
 
 .right{
     background: white;
-    background-size: 50% 100%;
-    width: 50%;
+    background-size: 100% 100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }

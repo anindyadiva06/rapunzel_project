@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../koneksi.php');
+require_once('../../koneksi.php');
 
 // Memeriksa apakah form login telah disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,13 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Redirect sesuai role setelah login
                 if ($_SESSION['role'] == 'storyteller') {
-                    header('Location: ../index/index.php');
+                    header('Location: ../pop-up/signin-success.php');
                 } else {
                     header('Location: ../../index/index.php');
                 }
                 exit();
             } else {
-                echo "Username atau password salah.";
+                header('Location: ../pop-up/signin-failed.php');
             }
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -48,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Menutup koneksi ke database
 mysqli_close($conn);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,13 +76,13 @@ mysqli_close($conn);
                 <div class="prop-left"><img src="sign-prop.png"></div>
                 <div class="form-box login">
                     <h2>SIGN IN</h2><style>h2{margin-bottom:25px;}</style>
-                    <form action="signin.php" method="post">
+                    <form action="POST" name="sign"  onsubmit="return validateForm()">
                         <div class="input-box">
                             <input type="text" name="username">
                             <label>Username</label>
                         </div>
                         <div class="input-box">
-                            <input type="password" name="password">
+                            <input type="password" name="password" >
                             <label>Password</label>
                         </div>
                         <div class="signup-link">
@@ -121,6 +120,7 @@ mysqli_close($conn);
     align-items: center;
     width: 100%;
     height: 100%;
+    position: fixed;
 }
 
 .right{

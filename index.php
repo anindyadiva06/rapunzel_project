@@ -4,7 +4,7 @@ require_once('koneksi.php');
 
 // Validasi role reader
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'reader') {
-    header("Location: login.html"); // Jika tidak, arahkan ke halaman login
+    header("Location: signin.php"); // Jika tidak, arahkan ke halaman login
     exit();
 }
 ?>

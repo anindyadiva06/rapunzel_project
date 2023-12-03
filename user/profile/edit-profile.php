@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDIT</title>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,23 +41,23 @@
                     </form>
                 </div>
                 <div class="btn">
-                    <button class="edit"><a href="save-profile.html">SAVE</a></button>
-                    <button class="delete"><a href="close-profile.html">CLOSE</a></button>
+                    <button class="edit"><a href="save-profile.php">SAVE</a></button>
+                    <button class="delete"><a href="my-profile.php">CLOSE</a></button>
                 </div>
             </div>
             <div class="right">
-                <div class="right-text"><a href="../index/index.html"><img src="arrow.png"></a></div>
+                <div class="right-text"><a href="../index/index.php"><img src="arrow.png"></a></div>
             </div>
         </div>
     </div>
 </body>
-</html>
+</php>
 
 
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Irish Grover');
-*, html, body{
+*, php, body{
         margin: 0;
         padding: 0;
         font-family: 'Irish Grover';
