@@ -4,7 +4,7 @@ require_once('koneksi.php');
 
 // Validasi role reader
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'reader') {
-    header("Location: signin.php"); // Jika tidak, arahkan ke halaman login
+    header("Location: admin/login/signup.php"); // Jika tidak, arahkan ke halaman login
     exit();
 }
 ?>
@@ -26,11 +26,11 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'reader') {
                 <li><a href="reader-index.php">HOME</a></li>
                 <!-- Tambahkan navigasi sesuai kebutuhan reader di sini -->
             </ul>
-            <a href="../profile/my-profile.html"><img class='acc' src="acc.jpg"></a>
+            <a href="../profile/my-profile.php"><img class='acc' src="acc.jpg"></a>
         </nav>
         <div class="main">
             <img src="disney.png">
-            <div class="learn-more"><a href="../story/story.html">LEARN MORE</a></div>
+            <div class="learn-more"><a href="../story/story.php">LEARN MORE</a></div>
         </div>
     </div>
 </body>

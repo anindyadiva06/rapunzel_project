@@ -203,11 +203,11 @@
                 <div class="left-text"><img src='navbar1.png'></div>
             </div>
             <ul class="navigation">
-                <li><a href="../index/index.html">HOME</a></li>
-                <li><a href="../character/character.html">CHARACTER</a></li>
-                <li><a href="activity.html">ACTIVITY</a></li>
+                <li><a href="../index/index.php">HOME</a></li>
+                <li><a href="../character/character.php">CHARACTER</a></li>
+                <li><a href="activity.php">ACTIVITY</a></li>
             </ul>
-            <a href="../profile/my-profile.html"><img class='acc' src="acc.jpg"></a>
+            <a href="../profile/my-profile.php"><img class='acc' src="acc.jpg"></a>
         </nav>
             <div class="main">
                 <div class="rapunzel"></div>
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="act">
                                     <p>Rapunzel kecil merayakan hari ulang tahunnya dengan perayaan lampion</p>
-                                    <button class="edit"><a href="edit-act.html">Edit</a></button>
+                                    <button class="edit"><a href="edit-act.php">Edit</a></button>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                                     </div>
                                     <div class="act">
                                         <p>Rapunzel kecil diculik oleh<br>penyihir jahat bernama mother gothel</p>
-                                        <button class="edit"><a href="edit-act.html">Edit</a></button>
+                                        <button class="edit"><a href="edit-act.php">Edit</a></button>
                                     </div>
                                 </div>
                         </div>
@@ -246,7 +246,7 @@
                             </div>
                             <div class="act">
                                 <p>Rapunzel kecil diculik oleh<br> penyihir jahat bernama mother gothel</p>
-                                <button class="edit"><a href="edit-act.html">Edit</a></button>
+                                <button class="edit"><a href="edit-act.php">Edit</a></button>
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                                 </div>
                                 <div class="act">
                                     <p>Rapunzel penasaran dengan dunia luar</p>
-                                    <button class="edit"><a href="edit-act.html">Edit</a></button>
+                                    <button class="edit"><a href="edit-act.php">Edit</a></button>
                                 </div>
                             </div>
                     </div>

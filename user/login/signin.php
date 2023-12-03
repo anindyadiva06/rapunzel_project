@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($_SESSION['role'] == 'storyteller') {
                     header('Location: ../pop-up/signin-success.php');
                 } else {
-                    header('Location: ../../index/index.php');
+                    header('Location: ../../user/index/index.php');
                 }
                 exit();
             } else {

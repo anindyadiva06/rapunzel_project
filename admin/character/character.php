@@ -28,28 +28,28 @@
                     <div class="wrap">
                         <div class="img1"></div>
                         <div class="name">Rapunzel</div>
-                        <div class="more"><a href="read-rapunzel.html">Get To Know Rapunzel</a></div>
+                        <div class="more"><a href="read-rapunzel.php">Get To Know Rapunzel</a></div>
                     </div>
                 </div>
                 <div class="box-2">
                     <div class="wrap">
                         <div class="img2"></div>
                         <div class="name">Eugene</div>
-                        <div class="more"><a href="read-eugene.html">Get To Know Eugene</a></div>
+                        <div class="more"><a href="read-eugene.php">Get To Know Eugene</a></div>
                     </div>
                 </div>
                 <div class="box-3">
                     <div class="wrap">
                         <div class="img3"></div>
                         <div class="name">Gothel</div>
-                        <div class="more"><a href="read-gothel.html">Get To Know Gothel</a></div>
+                        <div class="more"><a href="read-gothel.php">Get To Know Gothel</a></div>
                     </div>
                 </div>
                 <div class="box-4">
                     <div class="wrap">
                         <div class="img4"></div>
                         <div class="name">Maximus</div>
-                        <div class="more"><a href="read-maximus.html">Get To Know Maximus</a></div>
+                        <div class="more"><a href="read-maximus.php">Get To Know Maximus</a></div>
                     </div>
                 </div>
            </div>
