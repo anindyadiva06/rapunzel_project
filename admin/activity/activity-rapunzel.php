@@ -9,7 +9,7 @@
         *, html, body {
             margin: 0;
             padding: 0;
-            font-family: 'Irish Grover';
+            font-family: 'Irish Grover'; 
         }
 
         .container {
@@ -19,6 +19,7 @@
             align-items: center;
             width: 100vw;
             height: 100vh;
+            overflow-y: scroll; 
         }
 
         .wrapper {
@@ -91,6 +92,7 @@
             background-position: bottom left;
             background-size: contain;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .eugene {
@@ -103,6 +105,7 @@
             background-position: bottom right;
             background-size: contain;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .content {
@@ -128,10 +131,27 @@
             
         }
 
+        .add-act{
+            background-color: #EDD573;
+            width: 200px;
+            border-radius: 50px;
+            box-shadow: 0px 4px 10px black;
+            padding: 10px;
+            text-align: center;
+            transform: translateX(-180%);
+            margin-bottom: 20px;
+        }
+
+        .add-act a{
+            color: #C489CD;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
         .box-1{
             display: flex;
             justify-content: center;
-            width: 400px;
+            width: 500px;
             height: 200px;
             background-image: url('act-1.png');
             background-repeat: no-repeat;
@@ -139,20 +159,18 @@
             margin-left: 10px;
             margin-right: 10px;
             margin-bottom: 0px;
-   
         }
 
         .mini-box{
             display: flex;
             justify-content: center;
             flex-direction: row;
-            width: 350px;
-            height: 120px;
+            width: 450px;
+            height: 140px;
             box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
             background-color: #C489CD;
             border-radius: 80px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 30px;
         }
 
         .img img{
@@ -164,17 +182,18 @@
 
         .content h1 {
             color: #EDD573;
-            font-size: 40px;
-            font-weight: 400;
-            text-shadow:2px 3px 2px #C489CD; ;
+            font-size: 60px;
+            font-weight: 390;
+            margin-top: 90px;
+            text-shadow:2px 3px 2px #C489CD; 
         }
 
         .act p{
             margin-top: 10px;
             margin-left: 10px;
-            margin-right: 10px;
+            margin-right: 50px;
             color: #EDD573;
-            font-size: 13px;
+            font-size: 18px;
         }
 
         .edit {
@@ -214,6 +233,9 @@
                 <div class="eugene"></div>
                 <div class="content">
                    <h1>Activity Rapunzel</h1>
+                   <div class="add-act">
+                            <a href="add-act.php">Add Activity</a>
+                   </div>
                    <div class="big-box">
                         <div class="box-1">
                             <div class="mini-box">
@@ -221,7 +243,7 @@
                                     <img src="activity (1).png">
                                 </div>
                                 <div class="act">
-                                    <p>Rapunzel kecil merayakan hari ulang tahunnya dengan perayaan lampion</p>
+                                    <p>Little Rapunzel celebrates her birthday with a lantern celebration</p>
                                     <button class="edit"><a href="edit-act.html">Edit</a></button>
                                 </div>
                             </div>
@@ -232,7 +254,7 @@
                                         <img src="activity (2).png">
                                     </div>
                                     <div class="act">
-                                        <p>Rapunzel kecil diculik oleh<br>penyihir jahat bernama mother gothel</p>
+                                        <p>Rapunzel from childhood to adolescence spent her time in the tower</p>
                                         <button class="edit"><a href="edit-act.html">Edit</a></button>
                                     </div>
                                 </div>
@@ -242,10 +264,10 @@
                     <div class="box-1">
                         <div class="mini-box">
                             <div class="img">
-                                <img src="activity (3).png">
+                                <img src="activity (4).png">
                             </div>
                             <div class="act">
-                                <p>Rapunzel kecil diculik oleh<br> penyihir jahat bernama mother gothel</p>
+                                <p>Little Rapunzel was kidnapped by an evil witch named Mother Gothel</p>
                                 <button class="edit"><a href="edit-act.html">Edit</a></button>
                             </div>
                         </div>
@@ -253,19 +275,17 @@
                     <div class="box-1">
                             <div class="mini-box">
                                 <div class="img">
-                                    <img src="activity (4).png">
+                                    <img src="activity (3).png">
                                 </div>
                                 <div class="act">
-                                    <p>Rapunzel penasaran dengan dunia luar</p>
+                                    <p>Rapunzel is curious about the outside world</p>
                                     <button class="edit"><a href="edit-act.html">Edit</a></button>
                                 </div>
                             </div>
                     </div>
-               </div>
-                   
-                   
                     
-                
+                    
+               </div>
                 </div>
             </div>
     </div>

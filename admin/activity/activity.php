@@ -29,7 +29,7 @@
                         </div>
                         <div class="text">
                             <h2>Rapunzel</h2>
-                            <p>Perjalanan Rapunzel dari bayi saat diculik dari orang tuanya hingga bertemu dengan pencuri yang membantunya pergi dari menara untuk bertemu orang tuanya</p>
+                            <p>Rapunzel's journey from a baby when she was kidnapped from her parents to meeting a thief who helped her leave the tower to meet her parents</p>
                             <button class="read-more"><a href="activity-rapunzel.php">Read More</a></button>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="text">
                             <h2>Eugene</h2>
-                            <p>Perjalanan Eugene dari menjadi pencuri sampai bertemu dengan Rapunzel yang mengubah hidupnya</p>
+                            <p>Eugene's journey from being a thief to meeting Rapunzel who changed his life</p>
                             <button class="read-more"><a href="activity-eugene.php">Read More</a></button>
                         </div>
                     </div>
