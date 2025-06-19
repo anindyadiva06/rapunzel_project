@@ -75,10 +75,16 @@
     align-items: center;
     width:100vw;
     height: 100vh;
+<<<<<<< HEAD
     background-color: white;
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
+=======
+    background: linear-gradient(90deg, rgba(129,128,159,0.8181818181818181) 0%, rgba(70,45,74,0.6217532467532467) 0%), url('wallpaper.jpeg');
+    background-size: cover;
+    background-position: center center;
+>>>>>>> d08c6b9f7ac9526e99220029279792c5c98eae69
 }
 
 .wrapper{

@@ -31,13 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Redirect sesuai role setelah login
                 if ($_SESSION['role'] == 'storyteller') {
-                    header('Location: ../index/index.php');
+                    header('Location: ../pop-up/signin-success.php');
                 } else {
                     header('Location: ../../index/index.php');
                 }
                 exit();
             } else {
-                echo "Username atau password salah.";
+                header('Location: ../pop-up/signin-failed.php');
             }
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);

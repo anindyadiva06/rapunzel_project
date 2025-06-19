@@ -1,44 +1,29 @@
 <?php
 session_start();
-require_once('../koneksi.php');
+require_once('../../koneksi.php');
 
-// Memeriksa apakah form login telah disubmit
+// Memeriksa apakah form sign up telah disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Mengambil nilai dari form
+    $name = $_POST['name'];
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
 
     // Validasi form
-    if (empty($username) || empty($password)) {
+    if (empty($name) || empty($username) || empty($password) || empty($confirm_password)) {
         echo "Semua kolom harus diisi.";
+    } elseif ($password != $confirm_password) {
+        echo "Konfirmasi password tidak sesuai.";
     } else {
-        // Query SQL untuk memeriksa keberadaan user dalam database
-        $sql = "SELECT * FROM account WHERE username='$username' AND password='$password'";
-        $result = mysqli_query($conn, $sql);
+        // Query SQL untuk menambahkan user baru ke database
+        $sql = "INSERT INTO account (username, password, role) VALUES ('$username', '$password', 'user')";
 
-        // Memeriksa hasil query
-        if ($result) {
-            // Memeriksa jumlah baris hasil query
-            $row_count = mysqli_num_rows($result);
-            if ($row_count == 1) {
-                // Mengambil data user
-                $user_data = mysqli_fetch_assoc($result);
-
-                // Menyimpan data user dalam session
-                $_SESSION['user_id'] = $user_data['acc_id'];
-                $_SESSION['username'] = $user_data['username'];
-                $_SESSION['role'] = $user_data['role'];
-
-                // Redirect sesuai role setelah login
-                if ($_SESSION['role'] == 'storyteller') {
-                    header('Location: ../index/index.php');
-                } else {
-                    header('Location: ../../index/index.php');
-                }
-                exit();
-            } else {
-                echo "Username atau password salah.";
-            }
+        if (mysqli_query($conn, $sql)) {
+            echo "Pendaftaran berhasil. Silakan <a href='signin.php'>login</a>.";
+            // Redirect ke halaman signin.php setelah berhasil membuat akun
+            header('Location: signin.php');
+            exit();
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -55,12 +40,15 @@ mysqli_close($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>SIGN UP</title>
     <script>
         function validateForm() {
+            var name = document.forms["sign"]["name"].value;
             var username = document.forms["sign"]["username"].value;
             var password = document.forms["sign"]["password"].value;
-            if (username == "" || password == "") {
+            var pw = document.forms["sign"]["pw"].value;
+            if (name == "" || username == "" || password == "" || pw == "") {
                 alert("Field can't be empty! ");
                 return false; 
             }
@@ -76,20 +64,28 @@ mysqli_close($conn);
             <div class="right-text">
                 <div class="prop-left"><img src="sign-prop.png"></div>
                 <div class="form-box login">
-                    <h2>SIGN IN</h2><style>h2{margin-bottom:25px;}</style>
-                    <form action="signin.php" method="post">
+                    <h2>SIGN UP</h2><style>h2{margin-bottom:25px;}</style>
+                    <form action="POST" name="sign" onsubmit="return validateForm()">
+                        <div class="input-box">
+                            <input type="text" name="name">
+                            <label>Name</label>
+                        </div>
                         <div class="input-box">
                             <input type="text" name="username">
                             <label>Username</label>
                         </div>
                         <div class="input-box">
-                            <input type="password" name="password">
+                            <input type="password" name="password" >
                             <label>Password</label>
                         </div>
-                        <div class="signup-link">
-                            <p>Don't have an account yet? <a href="signup.php">SIGN UP</a></p>
+                        <div class="input-box">
+                            <input type="password" name="pw">
+                            <label>Confirm Password</label>
                         </div>
-                        <button class="btn">SIGN IN</button>
+                        <div class="signup-link">
+                            <p>Already have an account? <a href="signin.php">SIGN IN</a></p>
+                        </div>
+                        <button class="btn">SIGN UP</button>
                     </form> 
                 </div>
             </div>
@@ -107,12 +103,13 @@ mysqli_close($conn);
     font-family: 'Irish Grover';
 }
 
-.body{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
     max-height: 100vh; 
     background: white;
+    position: relative;
 }
 
 .container{
@@ -125,23 +122,27 @@ mysqli_close($conn);
 
 .right{
     background: white;
-    background-size: 50% 100%;
-    width: 50%;
+    background-size: 100% 100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+.left img{
+    position: bottom left;
 }
 
 .prop-left img{
     position: absolute;
     top: 0px; 
     right: 0px;
-    width: 178px;
+    width: 200px;
 }
 
 .container .form-box{
     position: absolute;
     top: 0;
-    width: 40%;
+    width: 35%;
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -149,7 +150,7 @@ mysqli_close($conn);
  }
 
  .container .form-box.login{
-    right : 55px;
+    right : 100px;
     padding: 0 40px 0 60px;
 }
 
@@ -178,11 +179,11 @@ mysqli_close($conn);
     background: transparent;
     border: none;
     outline: none;
-    color: rgb(187, 138, 187);
-    padding-right: 60px;
+    color: rgb(207, 154, 207);
+    padding-right: 23px;
     font-size: 20px;
     font-weight: 500;
-    border-bottom: 2px solid black;;
+    border-bottom: 2px solid black;
     transition: .5s;
  }
 
@@ -195,7 +196,7 @@ mysqli_close($conn);
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 20px; 
     color : black;
     pointer-events: none;
     transition: .5s;
@@ -230,7 +231,7 @@ mysqli_close($conn);
  .signup-link p a{
     text-decoration: none;
     font-weight: 500;
-    color: rgb(225, 150, 177);
+    color: rgb(187, 138, 187);
  }
 
  

@@ -222,11 +222,11 @@
                 <div class="left-text"><img src='navbar1.png'></div>
             </div>
             <ul class="navigation">
-                <li><a href="../index/index.html">HOME</a></li>
-                <li><a href="../character/character.html">CHARACTER</a></li>
-                <li><a href="activity.html">ACTIVITY</a></li>
+                <li><a href="../index/index.php">HOME</a></li>
+                <li><a href="../character/character.php">CHARACTER</a></li>
+                <li><a href="activity.php">ACTIVITY</a></li>
             </ul>
-            <a href="../profile/my-profile.html"><img class='acc' src="acc.jpg"></a>
+            <a href="../profile/my-profile.php"><img class='acc' src="acc.jpg"></a>
         </nav>
             <div class="main">
                 <div class="rapunzel"></div>
@@ -269,6 +269,7 @@
                             <div class="act">
                                 <p>Little Rapunzel was kidnapped by an evil witch named Mother Gothel</p>
                                 <button class="edit"><a href="edit-act.html">Edit</a></button>
+
                             </div>
                         </div>
                     </div>
@@ -280,6 +281,7 @@
                                 <div class="act">
                                     <p>Rapunzel is curious about the outside world</p>
                                     <button class="edit"><a href="edit-act.html">Edit</a></button>
+
                                 </div>
                             </div>
                     </div>

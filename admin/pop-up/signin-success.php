@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN FAILED</title>
+    <title>SIGN IN SUCCES</title>
 </head>
 <body>
     <div class="container">
@@ -11,10 +11,8 @@
             <div class="left-text"></div>
         </div>
         <div class="right">
-            <img src="warning.png">
-            <h1>SIGN IN FAILED!</h1>
-            <h3>Check your username or password again</h3>
-            <button class="ok"><a href="../login/signin.html">OK</a></button>
+            <h1>SIGN IN SUCCESSED!</h1>
+            <button class="ok"><a href="../index/index.php">OK</a></button>
         </div>
     </div>
     
@@ -56,7 +54,6 @@
     height: 100vh;
     color: rgb(233, 226, 131);
     font-size: 25px;  
-    font-weight: 400; 
 }
 
 h1, h3, .ok {
@@ -67,11 +64,11 @@ h1, h3, .ok {
 .ok{ 
     background: #C489CD;
     border: none;
-    padding: 10px;
+    padding: 5px;
     width: 500px;
     border-radius: 40px;
     cursor: pointer;
-    margin: 10px;
+    margin: 30px;
 }
 
 button a{
@@ -83,8 +80,5 @@ button a{
 .ok a{
     color: rgb(233, 226, 131);
 }
-
-.right img{
-    width: 100px;
-}
+ 
 </style>

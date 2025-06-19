@@ -1,5 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT</title>
+</head>
+<body>
+    <!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +26,10 @@
             </div>
             <div class="bottom">
                 <div class="box-1">
-                    <p style="text-align: center;">MY PROFILE</p>
+                    <p style="text-align: center;">EDIT PROFILE</p>
                 </div>
                 <div class="form-profile">
-                    <form action="POST">
+                    <form action="edit-profile.php" method="post">
                         <div class="input-box1">
                             <label>Name</label>
                             <input type="text">
@@ -33,23 +41,23 @@
                     </form>
                 </div>
                 <div class="btn">
-                    <button class="edit"><a href="edit-profile.html">EDIT</a></button>
-                    <button class="delete"><a href="delete-profile.html">DELETE</a></button>
+                    <button class="edit"><a href="save-profile.php">SAVE</a></button>
+                    <button class="delete"><a href="close-profile.php">CLOSE</a></button>
                 </div>
             </div>
             <div class="right">
-                <div class="right-text"><a href="../index/index.html"><img src="arrow.png"></a></div>
+                <div class="right-text"><a href="../index/index.php"><img src="arrow.png"></a></div>
             </div>
         </div>
     </div>
 </body>
-</html>
+</php>
 
 
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Irish Grover');
-*, html, body{
+*, php, body{
         margin: 0;
         padding: 0;
         font-family: 'Irish Grover';
@@ -103,10 +111,11 @@
 
 .input-box1{
     background-color: #C489CD;
-    width: 250px;
+    width: 300px;
     margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 40px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-radius: 50px;
     position: relative;
     display: flex;
     align-items: center;
@@ -114,10 +123,10 @@
 
 .input-box2{
     background-color: #C489CD;
-    width: 250px;
-    height: 100px;
+    width: 300px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     border-radius: 40px;
     position: relative;
     display: flex;
@@ -130,12 +139,15 @@
     background: transparent;
     border: none;
     outline: none;
+    border-bottom: 2px solid rgb(233, 226, 131);
     color: rgb(233, 226, 131);
     padding: 10px; 
     font-size: 15px;
     font-weight: 500;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
 }
 
 .input-box1 label, .input-box2 label{
@@ -182,8 +194,8 @@
 }
 
 .edit a, .delete a{
-    text-decoration: none; 
-    font-size: 17px;
+    text-decoration: none;
+    font-size: 17px; 
 }
 .edit{
     background: #C489CD;

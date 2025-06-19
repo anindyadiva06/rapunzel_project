@@ -11,8 +11,10 @@
             <div class="left-text"></div>
         </div>
         <div class="right">
-            <h1>SIGN IN SUCCESSED!</h1>
-            <button class="ok"><a href="../index/index.html">OK</a></button>
+            <img src="warning.png">
+            <h1>SIGN IN FAILED!</h1>
+            <h3>Check your username or password again</h3>
+            <button class="ok"><a href="../login/signin.php">OK</a></button>
         </div>
     </div>
     
@@ -54,6 +56,7 @@
     height: 100vh;
     color: rgb(233, 226, 131);
     font-size: 25px;  
+    font-weight: 400; 
 }
 
 h1, h3, .ok {
@@ -64,11 +67,11 @@ h1, h3, .ok {
 .ok{ 
     background: #C489CD;
     border: none;
-    padding: 5px;
+    padding: 10px;
     width: 500px;
     border-radius: 40px;
     cursor: pointer;
-    margin: 30px;
+    margin: 10px;
 }
 
 button a{
@@ -80,5 +83,8 @@ button a{
 .ok a{
     color: rgb(233, 226, 131);
 }
- 
+
+.right img{
+    width: 100px;
+}
 </style>
