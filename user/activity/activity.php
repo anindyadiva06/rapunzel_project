@@ -13,7 +13,7 @@
         }
 
         .container {
-            position: fixed;
+            /* position: fixed; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,17 +22,18 @@
         }
 
         .wrapper {
-            display: flex;
-            justify-content: space-between;
-            width: 100vw;
-            height: 60px;
-            font-size: 20px;
-            background-image: url('wallpaper.png');
-            background-size: cover;
-            box-shadow: 0 10px 50px 0 black;
-            background-position: center top;
-            position: fixed;
-            top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        height: 60px;
+        font-size: 20px;
+        background-image: url('wallpaper.png');
+        background-size: cover;
+        box-shadow: 0 10px 50px 0 black;
+        background-position: center top;
+        position: fixed;
+        top: 0;
+        z-index: 1000; /* Tambahkan baris ini */
         }
 
         .left .left-text img {
@@ -91,10 +92,11 @@
             background-position: bottom left;
             background-size: contain;
             background-repeat: no-repeat;
+            z-index: 1;
         }
 
         .eugene {
-            position: absolute;
+           position: absolute;
             bottom: 0;
             right: 0;
             width: 100%;
@@ -103,6 +105,7 @@
             background-position: bottom right;
             background-size: contain;
             background-repeat: no-repeat;
+            z-index: 1;
         }
 
         .content {
@@ -117,6 +120,7 @@
             align-items: center;
             width: 100%;
             height: 100%;
+            z-index: 2;
         }
 
         .box-1,
@@ -178,12 +182,13 @@
                 <div class="left-text"><img src='navbar1.png'></div>
             </div>
             <ul class="navigation">
-                <li><a href="../index/index.html">HOME</a></li>
-                <li><a href="../character/character.html">CHARACTER</a></li>
-                <li><a href="activity.html">ACTIVITY</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="../character/character.php">CHARACTER</a></li>
+                <li><a href="../activity/activity.php">ACTIVITY</a></li>
             </ul>
-            <a href="../profile/my-profile.html"><img class='acc' src="acc.jpg"></a>
-        </nav>
+            <a href="../profile/my-profile.php"><img class='acc' src="acc.jpg"></a>
+        </nav>  
+    </div>
             <div class="main">
                 <div class="rapunzel"></div>
                 <div class="eugene"></div>
@@ -196,7 +201,7 @@
                         <div class="text">
                             <h2>Rapunzel</h2>
                             <p>Perjalanan Rapunzel dari bayi saat diculik dari orang tuanya hingga bertemu dengan pencuri yang membantunya pergi dari menara untuk bertemu orang tuanya</p>
-                            <button class="read-more"><a href="activity-rapunzel.html">Read More</a></button>
+                            <button class="read-more"><a href="activity-rapunzel.php">Read More</a></button>
                         </div>
                     </div>
                     <div class="box-2">
@@ -206,7 +211,7 @@
                         <div class="text">
                             <h2>Eugene</h2>
                             <p>Perjalanan Eugene dari menjadi pencuri sampai bertemu dengan Rapunzel yang mengubah hidupnya</p>
-                            <button class="read-more"><a href="activity-eugene.html">Read More</a></button>
+                            <button class="read-more"><a href="activity-eugene.php">Read More</a></button>
                         </div>
                     </div>
                 

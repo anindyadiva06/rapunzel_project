@@ -12,18 +12,17 @@
                 <div class="left-text"><img src='navbar1.png'></div>
             </div>
             <ul class="navigation">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="../character/character.html">CHARACTER</a></li>
-                <li><a href="../activity/activity.html">ACTIVITY</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="../character/character.php">CHARACTER</a></li>
+                <li><a href="../activity/activity.php">ACTIVITY</a></li>
             </ul>
-            <a href="../profile/my-profile.html"><img class='acc' src="acc.jpg"></a>
+            <a href="../profile/my-profile.php"><img class='acc' src="acc.jpg"></a>
         </nav>
         <div class="main">
             <img src="disney.png">
-            <div class="learn-more"><a href="../story/story.html">LEARN MORE</a></div>
+            <div class="learn-more"><a href="../story/story.php">LEARN MORE</a></div>
         </div>
-        
-        
+    
     </div>
 </body>
 </html>
